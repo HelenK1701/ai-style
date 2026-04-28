@@ -4,6 +4,10 @@ Portfolio-grade end-to-end ML project that analyzes a portrait and recommends:
 - clothing color palette
 - hair color options
 - style, jewelry, and makeup notes
+<img width="607" height="410" alt="image" src="https://github.com/user-attachments/assets/406cbb0b-aee8-4f77-ac21-db0da8865361" />
+<img width="635" height="412" alt="image" src="https://github.com/user-attachments/assets/540753e7-324b-4b85-9b53-9f65ab156279" />
+<img width="529" height="460" alt="image" src="https://github.com/user-attachments/assets/f700582e-807a-4629-b69e-83611a665707" />
+
 
 ## Project Structure
 
