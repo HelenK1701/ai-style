@@ -24,9 +24,6 @@ dist/
 .ipynb_checkpoints/
 
 # Models and generated data
-models/*.pkl
-models/*.joblib
-models/metadata.json
 data/processed/*
 !data/processed/.gitkeep
 

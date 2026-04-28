@@ -11,7 +11,7 @@ from typing import Any
 import joblib
 import numpy as np
 
-from src.config import CLUSTER_MODEL_PATH, METADATA_PATH
+from src.config import CLUSTER_MODEL_PATH, METADATA_PATH, SCALER_PATH
 from src.face_detection import FaceDetector
 from src.feature_extraction import extract_features, features_to_dataframe
 from src.preprocessing import FeatureScaler, preprocess_pipeline
@@ -30,8 +30,14 @@ def _load_label_map() -> dict[int, str]:
 
 
 def run_inference(image_path: str | Path) -> dict[str, Any]:
-    if not Path(CLUSTER_MODEL_PATH).exists():
-        raise FileNotFoundError("Cluster model not found. Run `python train.py` first.")
+    required_files = [CLUSTER_MODEL_PATH, SCALER_PATH, METADATA_PATH]
+    missing = [str(path) for path in required_files if not Path(path).exists()]
+    if missing:
+        missing_list = ", ".join(missing)
+        raise FileNotFoundError(
+            f"Missing model artifacts: {missing_list}. "
+            "Run `python train.py` and upload files from models/ to deployment."
+        )
 
     img_rgb = load_image_rgb(image_path)
     detector = FaceDetector()

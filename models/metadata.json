@@ -1,0 +1,27 @@
+{
+  "n_clusters": 4,
+  "metrics": {
+    "3": {
+      "inertia": 186.67797972292837,
+      "silhouette": 0.18597581730968488
+    },
+    "4": {
+      "inertia": 160.8895351725678,
+      "silhouette": 0.1945221667406865
+    },
+    "5": {
+      "inertia": 140.06218231372054,
+      "silhouette": 0.14062939175736436
+    },
+    "6": {
+      "inertia": 120.58407480849587,
+      "silhouette": 0.16439048220716573
+    }
+  },
+  "cluster_label_map": {
+    "2": "Warm Soft",
+    "1": "Cool High Contrast",
+    "0": "Neutral Balanced",
+    "3": "Deep Rich"
+  }
+}
